@@ -86,6 +86,37 @@ class arrayOperation {
         }
         
     }
+
+    void deleteOp(int *arr, int size) {
+        int item, i, pos = -1;
+
+        cout << "Enter item to delete: ";
+        cin >> item;
+
+        for(i = 0; i < size; i++) {
+            if(arr[i] == item) {
+                for(int j = i; j < size-1; j++) {
+                    arr[j] = arr[j+1];
+                }
+                    pos = i;
+                    size--;
+                    break;
+                }
+            }
+        
+
+            if(pos == -1) {
+                cout << "Item is not present";
+            }
+
+            else {
+                cout << "New array: ";
+                    for(i = 0; i < size; i++) {
+                        cout << arr[i] << " ";
+                }
+            }
+    }
+    
 };
 
 int main () {
@@ -128,6 +159,11 @@ int main () {
 
         case 5:
         ap.sort(arr, size);
+
+        break;
+
+        case 6:
+        ap.deleteOp(arr, size);
 
         break;
 
