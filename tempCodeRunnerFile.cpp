@@ -1,4 +1,7 @@
-_end(head, 10);
-    // insert_end(head, 5);
-    // cout << "Data after end insertion: ";
-    // traver
+(head);
+    // cout << "Data after start deletion ";
+    // traverse(head);
+
+    // delete_end(head);
+    // cout << "Data after end deletion ";
+    // traverse(he
